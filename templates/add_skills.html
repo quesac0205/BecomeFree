@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Freelancer Skills</h2>
+<form method="POST">
+    <label for="flID">Select Freelancer:</label>
+    <select id="flID" name="flID" required>
+        {% for freelancer in freelancers %}
+        <option value="{{ freelancer.flID }}">{{ freelancer.name }}</option>
+        {% endfor %}
+    </select><br>
+
+    <label for="skillID">Select Skill:</label>
+    <select id="skillID" name="skillID" required>
+        {% for skill in skills %}
+        <option value="{{ skill.skillID }}">{{ skill.skillName }}</option>
+        {% endfor %}
+    </select><br>
+
+    <button type="submit">Add Skill</button>
+</form>
+{% endblock %}

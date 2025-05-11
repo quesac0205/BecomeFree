@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FREELANCERS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <h1>Freelancer Management System</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('profiles') }}">View Freelancers</a> |
+        <a href="{{ url_for('add_freelancer') }}">Add Freelancer</a> |
+        <a href="{{ url_for('projects') }}">Projects</a> |
+        <a href="{{ url_for('add_project') }}">Add Project</a> |
+        <a href="{{ url_for('skills') }}">Freelancer Skills</a> |
+        <a href="{{ url_for('add_skills') }}">Add Freelancer Skills</a> |
+        <a href="{{ url_for('assignments') }}">Project Assignments</a> |
+        <a href="{{ url_for('work_history') }}">Work History</a> |
+        <a href="{{ url_for('reviews') }}">Reviews</a> |
+        <a href="{{ url_for('refine') }}">Refine Query</a>
+
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+/* https://www.w3schools.com/w3css/w3css_templates.asp  */
+
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

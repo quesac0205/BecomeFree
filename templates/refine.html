@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Query: Specific High Rate (>50) Freelancers and Their Projects</h2>
+{% for entry in refined_query %}
+<h3>{{ entry.freelancer.name }} (${{ entry.freelancer.rate }}/hr)</h3>
+<ul>
+    {% for project in entry.projects %}
+    <li>{{ project.title }}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}

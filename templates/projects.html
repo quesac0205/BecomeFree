@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Projects</h2>
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Budget</th>
+        <th>Organization</th>
+    </tr>
+    {% for project in projects %}
+    <tr>
+        <td>{{ project["title"] }}</td>
+        <td>{{ project["budget"] }}</td>
+        <td>{{ project["organization"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Assignments</h2>
+
+<h3>Existing Assignments</h3>
+<table border="1">
+    <tr>
+        <th>Freelancer</th>
+        <th>Project</th>
+    </tr>
+    {% for assignment in assignments %}
+    <tr>
+        <td>{{ assignment.freelancer }}</td>
+        <td>{{ assignment.project }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Assign Freelancer to Project</h3>
+<form method="POST">
+    <label for="flID">Select Freelancer:</label>
+    <select name="flID" id="flID" required>
+        {% for freelancer in freelancers %}
+        <option value="{{ freelancer.flID }}">{{ freelancer.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="projectID">Select Project:</label>
+    <select name="projectID" id="projectID" required>
+        {% for project in projects %}
+        <option value="{{ project.projectID }}">{{ project.title }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <button type="submit">Assign</button>
+</form>
+{% endblock %}

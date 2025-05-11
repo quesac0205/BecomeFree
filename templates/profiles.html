@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Active Freelancers List</h2>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Rate</th>
+        <th>Availability</th>
+    </tr>
+    {% for profile in profiles %}
+    <tr>
+        <td>{{ profile["flID"] }}</td>
+        <td>{{ profile["name"] }}</td>
+        <td>{{ profile["rate"] }}</td>
+        <td>{{ profile["availability"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

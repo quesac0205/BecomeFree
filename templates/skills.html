@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Freelancer Skills</h2>
+<table border="1">
+    <tr>
+        <th>Freelancer</th>
+        <th>Skill</th>
+    </tr>
+    {% for skill in skills %}
+    <tr>
+        <td>{{ skill["freelancer"] }}</td>
+        <td>{{ skill["skillName"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

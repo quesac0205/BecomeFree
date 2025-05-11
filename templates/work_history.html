@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Work History</h2>
+<table border="1">
+    <tr>
+        <th>Freelancer</th>
+        <th>Project</th>
+        <th>Role</th>
+        <th>Comments</th>
+    </tr>
+    {% for entry in history %}
+    <tr>
+        <td>{{ entry.freelancer }}</td>
+        <td>{{ entry.project }}</td>
+        <td>{{ entry.role }}</td>
+        <td>{{ entry.comments }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
